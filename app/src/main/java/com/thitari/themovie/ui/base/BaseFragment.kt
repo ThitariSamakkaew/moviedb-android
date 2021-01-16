@@ -1,7 +1,9 @@
 package com.thitari.themovie.ui.base
 
-import androidx.lifecycle.AbstractSavedStateViewModelFactory
-import androidx.lifecycle.ViewModelProvider
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
@@ -15,4 +17,11 @@ abstract class BaseFragment<VM : BaseViewModel> : DaggerFragment() {
 
     abstract fun provideViewModel(): VM
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(layoutRes,container,false)
+    }
 }

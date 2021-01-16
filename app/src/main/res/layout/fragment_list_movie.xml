@@ -4,70 +4,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarListMovie"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/ivFragmentMovie"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_picture"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.tabs.TabLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tabBackground="@color/purple_200"
-            app:tabGravity="fill"
-            app:tabInlineLabel="true"
-            app:tabMode="fixed"
-            app:tabTextColor="@color/black">
+    <TextView
+        android:id="@+id/tvFragmentMovieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:text="Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        </com.google.android.material.tabs.TabLayout>
+    <TextView
+        android:id="@+id/tvFragmentMovieRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:text="TopRating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFragmentMovieTitle" />
 
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPagerListMovie"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/appBarListMovie" />
-
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
-
-<!--    </androidx.recyclerview.widget.RecyclerView>-->
+    <TextView
+        android:id="@+id/tvFragmentMovieRelease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:text="Release"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFragmentMovieRating" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--    <view-->
-    <!--        android:id="@+id/vFragmentListMovie"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="80dp"-->
-    <!--        android:layout_marginTop="8dp"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/btnFragmentListMoviePopular" />-->
-
-
-    <!--    <ImageView-->
-    <!--        android:id="@+id/ivFragmentListMoviePictures"-->
-    <!--        android:layout_width="100dp"-->
-    <!--        android:layout_height="120dp"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/vFragmentListMovie" />-->
-
-    <!--    <TextView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="120dp"-->
-    <!--        android:text="DETAIL "-->
-    <!--        app:layout_constraintStart_toEndOf="@id/ivFragmentListMoviePictures"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/vFragmentListMovie" />-->
-
-

@@ -1,0 +1,58 @@
+package com.thitari.themovie.ui.screen.main.fragment.main.list
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.annotation.LayoutRes
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.RecyclerView
+import com.thitari.themovie.R
+import kotlinx.android.extensions.LayoutContainer
+
+class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.MovieViewHolder>() {
+
+    var movieUiModels: List<MovieUiModel> = emptyList()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
+
+    private lateinit var recyclerView: RecyclerView
+
+    override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
+        this.recyclerView = recyclerView
+        val dividerItemDecoration =
+            DividerItemDecoration(recyclerView.context, DividerItemDecoration.VERTICAL)
+        recyclerView.addItemDecoration(dividerItemDecoration)
+    }
+
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        @LayoutRes viewType: Int
+    ): MovieViewHolder {
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.fragment_list_movie, parent, false)
+        return MovieViewHolder(itemView)
+    }
+
+    override fun getItemCount(): Int = movieUiModels.size
+
+    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
+        holder.bindUiModel(movieUiModels[position])
+    }
+
+    inner class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), LayoutContainer {
+
+        lateinit var uiModel: MovieUiModel
+
+        fun bindUiModel(uiModel: MovieUiModel) {
+            this.uiModel = uiModel
+            with(uiModel) {
+
+            }
+        }
+
+        override val containerView: View?
+            get() = itemView
+    }
+}
