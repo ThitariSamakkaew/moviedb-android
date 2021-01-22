@@ -1,20 +1,19 @@
 package com.thitari.themovie.api.response
 
-import java.util.*
+import com.google.gson.annotations.SerializedName
 
-class MovieResponse(
-    val adult: Boolean,
-    val backdrop_path: String,
-    val genre_ids: IntArray,
-    val id : Int,
-    val original_language : String,
-    val original_title : String,
-    val overview : String,
-    val popularity : Int,
-    val poster_path : String,
-    val release_date : Date,
-    val title : String,
-    val video : Boolean,
-    val vote_average : Float,
-    val vote_count : Int
+data class MovieResponse(
+    @SerializedName("adult") val adult: Boolean,
+    @SerializedName("backdrop_path") val backdropPath: String,
+    @SerializedName("id") val id: Int,
+    @SerializedName("original_language") val originalLanguage: String,
+    @SerializedName("original_title") val originalTitle: String,
+    @SerializedName("overview") val overview: String,
+    @SerializedName("popularity ") val popularity: Float,
+    @SerializedName("poster_path") val posterPath: String,
+    @SerializedName("release_date") val releaseDate: String,
+    @SerializedName("title") val title: String,
+    @SerializedName("video") val video: Boolean,
+    @SerializedName("vote_average") val voteAverage: Float,
+    @SerializedName("vote_count") val voteCount: Int
 )

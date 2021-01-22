@@ -12,12 +12,11 @@ import dagger.multibindings.IntoMap
 @Module
 interface  UpcomingMovieListFragmentModule {
 
-    @ExperimentalStdlibApi
     @Binds
     @IntoMap
     @FragmentScope
     @ViewModelKey(UpcomingMovieListViewModel::class)
-    fun upcomingMovieListViewModel(personalInfoViewModel: UpcomingMovieListViewModelImpl): ViewModel
+    fun upcomingMovieListViewModel(upComingMovieListViewModel: UpcomingMovieListViewModelImpl): ViewModel
 }
 
 

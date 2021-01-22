@@ -15,27 +15,31 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         debug {
-            buildConfigField("String", "API_ENDPOINT", "\"https://dtgs7chl0i.execute-api.eu-central-1.amazonaws.com/development/\"")
+            buildConfigField("String", "API_ENDPOINT", "\"https://api.themoviedb.org/3/\"")
         }
 
         release {
-            buildConfigField("String", "API_ENDPOINT", "\"https://dtgs7chl0i.execute-api.eu-central-1.amazonaws.com/development/\"")
+            buildConfigField("String", "API_ENDPOINT", "\"https://api.themoviedb.org/3/\"")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    androidExtensions {
+        experimental = true
     }
 }
 

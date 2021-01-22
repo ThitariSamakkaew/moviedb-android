@@ -3,4 +3,5 @@
     <string name="popular">Popular</string>
     <string name="upcoming">UPCOMING</string>
     <string name="top">TOP</string>
+    <string name="error_default">Something wrong.Please try again</string>
 </resources>

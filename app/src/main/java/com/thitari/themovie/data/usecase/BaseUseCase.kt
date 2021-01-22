@@ -14,7 +14,7 @@ abstract class BaseUseCase<in Params, out Result>(
         }
     }
 
-    abstract suspend fun run(params: Params): Result
+    protected abstract suspend fun run(params: Params): Result
 
     protected fun composeError(error: Throwable): Throwable = when (error) {
         is AppError -> error

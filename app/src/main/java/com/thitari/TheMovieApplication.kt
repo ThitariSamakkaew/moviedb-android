@@ -1,6 +1,5 @@
 package com.thitari
 
-import com.thitari.themovie.BuildConfig
 import com.thitari.themovie.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication

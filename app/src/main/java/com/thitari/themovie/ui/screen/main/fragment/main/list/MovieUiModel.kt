@@ -4,14 +4,16 @@ import com.thitari.themovie.data.model.Movie
 
 data class MovieUiModel(
     val id: Int,
-    val popularity: Float,
-    val posterPath: String,
-    val title: String
+    val imageUrl: String,
+    val title: String,
+    val rating: Float,
+    val releaseDate: String
 )
 
 fun Movie.toPopularUiModel() = MovieUiModel(
     id = id,
-    popularity = popularity,
-    posterPath = poster_path,
-    title = title
+    imageUrl = imageUrl,
+    title = title,
+    rating = rating,
+    releaseDate = releaseDate
 )

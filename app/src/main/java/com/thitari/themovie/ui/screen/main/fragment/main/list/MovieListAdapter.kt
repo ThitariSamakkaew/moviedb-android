@@ -3,11 +3,14 @@ package com.thitari.themovie.ui.screen.main.fragment.main.list
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.thitari.themovie.R
 import kotlinx.android.extensions.LayoutContainer
+import kotlinx.android.synthetic.main.item_movie.*
 
 class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.MovieViewHolder>() {
 
@@ -31,7 +34,7 @@ class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.MovieViewHolder>(
         @LayoutRes viewType: Int
     ): MovieViewHolder {
         val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.fragment_list_movie, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_movie, parent, false)
         return MovieViewHolder(itemView)
     }
 
@@ -41,14 +44,18 @@ class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.MovieViewHolder>(
         holder.bindUiModel(movieUiModels[position])
     }
 
-    inner class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), LayoutContainer {
+    inner class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+        LayoutContainer {
 
         lateinit var uiModel: MovieUiModel
 
         fun bindUiModel(uiModel: MovieUiModel) {
             this.uiModel = uiModel
             with(uiModel) {
-
+                ivItemMovie.load(imageUrl)
+                tvItemMovieTitle.text = title
+                tvItemMovieRating.text = rating.toString()
+                tvItemMovieReleaseDate.text = releaseDate
             }
         }
 
@@ -56,3 +63,4 @@ class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.MovieViewHolder>(
             get() = itemView
     }
 }
+

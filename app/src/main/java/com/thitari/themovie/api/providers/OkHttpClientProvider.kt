@@ -1,7 +1,6 @@
 package com.thitari.themovie.api.providers
 
 import com.thitari.themovie.BuildConfig
-import okhttp3.Authenticator
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import java.util.concurrent.TimeUnit
@@ -9,7 +8,6 @@ import java.util.concurrent.TimeUnit
 object OkHttpClientProvider {
     
     fun provideOkHttpClient(
-        authenticator: Authenticator
     ): OkHttpClient {
         val logging = HttpLoggingInterceptor().apply {
             level = if (BuildConfig.DEBUG) {
@@ -24,7 +22,6 @@ object OkHttpClientProvider {
             .writeTimeout(DEFAULT_TIMEOUT_IN_SEC, TimeUnit.SECONDS)
             .retryOnConnectionFailure(true)
             .addInterceptor(logging)
-            .authenticator(authenticator)
             .build()
     }
 }
