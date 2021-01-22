@@ -9,6 +9,10 @@ import javax.inject.Inject
 interface MovieRepository {
 
     suspend fun getPopularMovies(page: Int): Page
+
+    suspend fun getUpcomingMovie(page: Int): Page
+
+    suspend fun getTopMovie(page: Int): Page
 }
 
 class MovieRepositoryImpl @Inject constructor(private val service: MovieService) :
@@ -16,6 +20,16 @@ class MovieRepositoryImpl @Inject constructor(private val service: MovieService)
 
     override suspend fun getPopularMovies(page: Int): Page {
         val response: PageResponse = service.popularMovie(page)
+        return response.toPage()
+    }
+
+    override suspend fun getUpcomingMovie(page: Int): Page {
+        val response: PageResponse = service.upcomingMovie(page)
+        return response.toPage()
+    }
+
+    override suspend fun getTopMovie(page: Int): Page {
+        val response: PageResponse = service.topMovie(page)
         return response.toPage()
     }
 }

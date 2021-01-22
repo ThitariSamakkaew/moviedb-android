@@ -30,7 +30,6 @@ abstract class BaseMovieListViewModel : BaseViewModel() {
     val error: LiveData<Throwable>
         get() = _error
 
-
     private fun List<Movie>.toMovieUiModels() = this.map { movie ->
         with(movie) {
             MovieUiModel(

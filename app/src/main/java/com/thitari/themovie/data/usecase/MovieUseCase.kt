@@ -10,8 +10,7 @@ class MovieUseCase @Inject constructor(private val movieRepository: MovieReposit
 
     override suspend fun run(params: Unit): Page {
         return movieRepository.getPopularMovies(
-            page = 1,
-//            apiKey = "1b695a7e9114672b94ecb61f22345998"
+            page = 1
         )
     }
 }

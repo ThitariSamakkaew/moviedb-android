@@ -1,6 +1,5 @@
 package com.thitari.themovie.data.model
 
-
 import com.thitari.themovie.api.response.PageResponse
 
 data class Page(
