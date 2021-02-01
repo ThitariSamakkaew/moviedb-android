@@ -1,7 +1,7 @@
 package com.thitari.themovie.di
 
 import android.app.Application
-import com.thitari.TheMovieApplication
+import com.thitari.themovie.ui.TheMovieApplication
 import com.thitari.themovie.di.modules.AppModule
 import com.thitari.themovie.di.modules.activity.ActivityModule
 import dagger.BindsInstance

@@ -9,5 +9,5 @@ class PopularMovieListUseCase @Inject constructor(private val popularRepository:
     BaseUseCase<Unit, List<Movie>>(::AppError) {
 
     override suspend fun run(params: Unit): List<Movie> =
-        popularRepository.getPopularMovies(page = 1).result
+        popularRepository.getPopularListMovies(page = 1).result
 }

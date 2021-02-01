@@ -4,4 +4,20 @@
     <string name="upcoming">UPCOMING</string>
     <string name="top">TOP</string>
     <string name="error_default">Something wrong.Please try again</string>
+    <string name="movie_detail_original_title">OriginalTitle</string>
+    <string name="movie_detail_budget_label">Budget :</string>
+    <string name="movie_detail_budget_value">Budget</string>
+    <string name="movie_detail_popularity_label">Popularity :</string>
+    <string name="movie_detail_popularity_value">Popularity</string>
+    <string name="movie_detail_language_label">Language :</string>
+    <string name="movie_detail_original_language_value">OriginalLanguage</string>
+    <string name="movie_detail_adult_label">Adult :</string>
+    <string name="movie_detail_adult_value">Adult</string>
+    <string name="movie_detail_release_date_label">ReleaseDate :</string>
+    <string name="movie_detail_release_date_value">ReleaseDate</string>
+    <string name="movie_detail_overview_label">OverView</string>
+    <string name="movie_detail_overview_value">OverView</string>
+    <string name="movie_title">Title</string>
+    <string name="movie_top_rating">TopRating</string>
+    <string name="movie_release_date">ReleaseDate</string>
 </resources>

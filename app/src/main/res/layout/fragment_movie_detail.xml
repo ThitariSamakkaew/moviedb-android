@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mimosa_yellow">
+
+    <ImageView
+        android:id="@+id/ivFragmentDetail"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_picture"
+        app:layout_constraintBottom_toTopOf="@id/tvFragmentDetailTitleOverViewLabel"
+        app:layout_constraintEnd_toStartOf="@id/tvFragmentDetailTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvFragmentDetailTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/movie_detail_original_title"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvFragmentDetailTitleBudgetLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivFragmentDetail"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFragmentDetailTitleBudgetLabel"
+        style="@style/TextAppearance.Movie.Detail.Label"
+        android:text="@string/movie_detail_budget_label"
+        app:layout_constraintBottom_toTopOf="@id/tvFragmentDetailTitlePopularLabel"
+        app:layout_constraintEnd_toStartOf="@id/tvFragmentDetailBudgetValue"
+        app:layout_constraintStart_toEndOf="@id/ivFragmentDetail"
+        app:layout_constraintTop_toBottomOf="@id/tvFragmentDetailTitle" />
+
+    <TextView
+        android:id="@+id/tvFragmentDetailBudgetValue"
+        style="@style/TextAppearance.Movie.Detail.Value"
+        android:text="@string/movie_detail_budget_value"
+        app:layout_constraintBottom_toTopOf="@id/ivFragmentDetailPopularityValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvFragmentDetailTitleBudgetLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvFragmentDetailTitle" />
+
+    <TextView
+        android:id="@+id/tvFragmentDetailTitlePopularLabel"
+        style="@style/TextAppearance.Movie.Detail.Label"
+        android:text="@string/movie_detail_popularity_label"
+        app:layout_constraintBottom_toTopOf="@id/tvFragmentDetailTitleLanguageLabel"
+        app:layout_constraintEnd_toStartOf="@id/ivFragmentDetailPopularityValue"
+        app:layout_constraintStart_toEndOf="@id/ivFragmentDetail"
+        app:layout_constraintTop_toBottomOf="@id/tvFragmentDetailTitleBudgetLabel" />
+
+    <TextView
+        android:id="@+id/ivFragmentDetailPopularityValue"
+        style="@style/TextAppearance.Movie.Detail.Value"
+        android:text="@string/movie_detail_popularity_value"
+        app:layout_constraintBottom_toTopOf="@id/tvFragmentDetailLanguageValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvFragmentDetailTitlePopularLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvFragmentDetailBudgetValue" />
+
+    <TextView
+        android:id="@+id/tvFragmentDetailTitleLanguageLabel"
+        style="@style/TextAppearance.Movie.Detail.Label"
+        android:text="@string/movie_detail_language_label"
+        app:layout_constraintBottom_toTopOf="@id/tvFragmentDetailTitleAdultLabel"
+        app:layout_constraintEnd_toStartOf="@id/tvFragmentDetailLanguageValue"
+        app:layout_constraintStart_toEndOf="@id/ivFragmentDetail"
+        app:layout_constraintTop_toBottomOf="@id/tvFragmentDetailTitlePopularLabel" />
+
+    <TextView
+        android:id="@+id/tvFragmentDetailLanguageValue"
+        style="@style/TextAppearance.Movie.Detail.Value"
+        android:text="@string/movie_detail_original_language_value"
+        app:layout_constraintBottom_toTopOf="@id/tvFragmentMovieDetailAdultValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvFragmentDetailTitleLanguageLabel"
+        app:layout_constraintTop_toBottomOf="@id/ivFragmentDetailPopularityValue" />
+
+    <TextView
+        android:id="@+id/tvFragmentDetailTitleAdultLabel"
+        style="@style/TextAppearance.Movie.Detail.Label"
+        android:text="@string/movie_detail_adult_label"
+        app:layout_constraintBottom_toTopOf="@id/tvFragmentDetailTitleReleaseDateLabel"
+        app:layout_constraintEnd_toStartOf="@id/tvFragmentMovieDetailAdultValue"
+        app:layout_constraintStart_toEndOf="@id/ivFragmentDetail"
+        app:layout_constraintTop_toBottomOf="@id/tvFragmentDetailTitleLanguageLabel" />
+
+    <TextView
+        android:id="@+id/tvFragmentMovieDetailAdultValue"
+        style="@style/TextAppearance.Movie.Detail.Value"
+        android:text="@string/movie_detail_adult_value"
+        app:layout_constraintBottom_toTopOf="@id/tvFragmentDetailReleaseDateValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvFragmentDetailTitleAdultLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvFragmentDetailLanguageValue" />
+
+    <TextView
+        android:id="@+id/tvFragmentDetailTitleReleaseDateLabel"
+        style="@style/TextAppearance.Movie.Detail.Label"
+        android:text="@string/movie_detail_release_date_label"
+        app:layout_constraintEnd_toStartOf="@id/tvFragmentDetailReleaseDateValue"
+        app:layout_constraintStart_toEndOf="@id/ivFragmentDetail"
+        app:layout_constraintTop_toBottomOf="@id/tvFragmentDetailTitleAdultLabel" />
+
+    <TextView
+        android:id="@+id/tvFragmentDetailReleaseDateValue"
+        style="@style/TextAppearance.Movie.Detail.Value"
+        android:text="@string/movie_detail_release_date_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvFragmentDetailTitleReleaseDateLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvFragmentMovieDetailAdultValue" />
+
+    <TextView
+        android:id="@+id/tvFragmentDetailTitleOverViewLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/movie_detail_overview_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvFragmentDetailOverViewValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivFragmentDetail" />
+
+    <TextView
+        android:id="@+id/tvFragmentDetailOverViewValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/movie_detail_overview_value"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFragmentDetailTitleOverViewLabel" />
+
+    <ProgressBar
+        android:id="@+id/pbFragmentMovieDetail"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

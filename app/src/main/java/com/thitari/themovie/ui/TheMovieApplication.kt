@@ -1,4 +1,4 @@
-package com.thitari
+package com.thitari.themovie.ui
 
 import com.thitari.themovie.di.DaggerAppComponent
 import dagger.android.AndroidInjector

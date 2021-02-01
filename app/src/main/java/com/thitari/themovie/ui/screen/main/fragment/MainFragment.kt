@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.tabs.TabLayoutMediator
 import com.thitari.themovie.R
 import com.thitari.themovie.ui.base.BaseFragment
-import com.thitari.themovie.ui.screen.main.fragment.main.ViewPagerAdapter
+import com.thitari.themovie.ui.screen.main.fragment.main.list.ViewPagerAdapter
 
 import kotlinx.android.synthetic.main.fragment_main.*
 

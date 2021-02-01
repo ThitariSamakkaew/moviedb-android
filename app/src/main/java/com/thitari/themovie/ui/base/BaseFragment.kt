@@ -35,6 +35,6 @@ abstract class BaseFragment<VM : BaseViewModel> : DaggerFragment() {
     protected open fun displayError(error: Throwable) {
         Log.e(this.javaClass.simpleName, "", error)
         val message = error.toReadableMessage(requireContext())
-        //   toaster.display(message)
+           toaster.display(message)
     }
 }

@@ -9,7 +9,7 @@ class MovieUseCase @Inject constructor(private val movieRepository: MovieReposit
     BaseUseCase<Unit, Page>(::AppError) {
 
     override suspend fun run(params: Unit): Page {
-        return movieRepository.getPopularMovies(
+        return movieRepository.getPopularListMovies(
             page = 1
         )
     }

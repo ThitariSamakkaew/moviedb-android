@@ -1,17 +1,25 @@
 package com.thitari.themovie.ui.screen.main.fragment.main.list
 
+
 import android.os.Bundle
 import android.view.View
+import com.thitari.themovie.MainNavigator
 import com.thitari.themovie.R
 import com.thitari.themovie.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_list_movie.*
+import javax.inject.Inject
 
 abstract class BaseMovieListFragment : BaseFragment<BaseMovieListViewModel>() {
+
+    @Inject
+    lateinit var navigator: MainNavigator
 
     override val layoutRes: Int
         get() = R.layout.fragment_list_movie
 
-    private val movieListAdapter = MovieListAdapter()
+    private val movieListAdapter = MovieListAdapter { uiModel ->
+        navigator.navigateToMovieDetail(uiModel.id)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         rvFragmentListMovie.adapter = movieListAdapter
@@ -32,5 +40,7 @@ abstract class BaseMovieListFragment : BaseFragment<BaseMovieListViewModel>() {
         }
     }
 
-    private fun bindLoading(isLoading: Boolean) {}
+    private fun bindLoading(isLoading: Boolean) {
+
+    }
 }

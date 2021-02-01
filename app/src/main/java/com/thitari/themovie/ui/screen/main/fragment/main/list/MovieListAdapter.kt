@@ -11,7 +11,8 @@ import com.thitari.themovie.R
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_movie.*
 
-class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.MovieViewHolder>() {
+class MovieListAdapter(private val movieCallback: (movie: MovieUiModel) -> Unit) :
+    RecyclerView.Adapter<MovieListAdapter.MovieViewHolder>() {
 
     var movieUiModels: List<MovieUiModel> = emptyList()
         set(value) {
@@ -48,6 +49,12 @@ class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.MovieViewHolder>(
 
         lateinit var uiModel: MovieUiModel
 
+        init {
+            itemView.setOnClickListener {
+                movieCallback.invoke(uiModel)
+            }
+        }
+
         fun bindUiModel(uiModel: MovieUiModel) {
             this.uiModel = uiModel
             with(uiModel) {
@@ -62,4 +69,3 @@ class MovieListAdapter : RecyclerView.Adapter<MovieListAdapter.MovieViewHolder>(
             get() = itemView
     }
 }
-

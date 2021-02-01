@@ -9,5 +9,5 @@ class UpcomingMovieListUseCase @Inject constructor(private val upComingRepositor
     BaseUseCase<Unit, List<Movie>>(::AppError) {
 
     override suspend fun run(params: Unit): List<Movie> =
-        upComingRepository.getUpcomingMovie(page = 1).result
+        upComingRepository.getUpcomingListMovies(page = 1).result
 }
