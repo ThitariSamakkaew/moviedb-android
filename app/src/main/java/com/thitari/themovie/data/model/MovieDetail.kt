@@ -1,8 +1,6 @@
 package com.thitari.themovie.data.model
 
-import android.os.Parcelable
 import com.thitari.themovie.api.response.DetailResponse
-import kotlinx.android.parcel.Parcelize
 
 data class MovieDetail(
     val adult: Boolean,
@@ -11,7 +9,7 @@ data class MovieDetail(
     val originalTitle: String,
     val overview: String,
     val posterPath: String,
-    val popularity: Float,
+    val popularity: Double,
     val releaseDate: String,
     val originalLanguage: String
 )

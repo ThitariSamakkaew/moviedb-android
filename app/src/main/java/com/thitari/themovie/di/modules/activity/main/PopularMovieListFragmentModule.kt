@@ -17,4 +17,5 @@ interface PopularMovieListFragmentModule {
     @FragmentScope
     @ViewModelKey(PopularMovieListViewModel::class)
     fun popularMovieListViewModel(popularMovieListViewModel: PopularMovieListViewModelImpl): ViewModel
+
 }

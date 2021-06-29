@@ -20,6 +20,6 @@ fun MovieResponse.toMovie(): Movie {
         imageUrl = "https://image.tmdb.org/t/p/w500/$posterPath",
         title = title,
         rating = popularity,
-        releaseDate = releaseDate
+        releaseDate = releaseDate ?: ""
     )
 }

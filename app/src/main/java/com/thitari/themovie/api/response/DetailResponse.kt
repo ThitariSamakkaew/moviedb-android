@@ -9,7 +9,7 @@ data class DetailResponse(
     @SerializedName("original_title") val originalTitle: String,
     @SerializedName("overview") val overview: String,
     @SerializedName("poster_path") val posterPath: String,
-    @SerializedName("popularity") val popularity: Float,
+    @SerializedName("popularity") val popularity: Double,
     @SerializedName("original_language") val originalLanguage: String,
     @SerializedName("release_date") val releaseDate: String
 )

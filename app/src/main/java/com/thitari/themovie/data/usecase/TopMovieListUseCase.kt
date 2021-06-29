@@ -8,5 +8,6 @@ import javax.inject.Inject
 class TopMovieListUseCase @Inject constructor(private val topRepository: MovieRepository) :
     BaseUseCase<Unit, List<Movie>>(::AppError) {
 
-    override suspend fun run(params: Unit): List<Movie> = topRepository.getTopListMovies(page = 1).result
+    override suspend fun run(params: Unit): List<Movie> =
+        topRepository.getTopListMovies(page = 1).result
 }

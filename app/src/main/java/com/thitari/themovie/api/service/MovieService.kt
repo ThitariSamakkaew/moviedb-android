@@ -31,4 +31,6 @@ interface MovieService {
         @Path("movieId") movieId: Int,
         @Query("api_key") apiKey: String = "1b695a7e9114672b94ecb61f22345998"
     ): DetailResponse
+
 }
+

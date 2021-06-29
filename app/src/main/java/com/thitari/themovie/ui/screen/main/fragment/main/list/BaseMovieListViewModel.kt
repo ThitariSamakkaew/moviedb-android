@@ -31,17 +31,9 @@ abstract class BaseMovieListViewModel : BaseViewModel() {
         get() = _error
 
     private fun List<Movie>.toMovieUiModels() = this.map { movie ->
-        with(movie) {
-            MovieUiModel(
-                id = id,
-                imageUrl = imageUrl,
-                title = title,
-                rating = rating,
-                releaseDate = releaseDate
-            )
-        }
+        movie.toUiModel()
     }
 
     protected abstract suspend fun loadPageMovies(): List<Movie>
-
 }
+

@@ -10,7 +10,7 @@ data class MovieUiModel(
     val releaseDate: String
 )
 
-fun Movie.toPopularUiModel() = MovieUiModel(
+fun Movie.toUiModel() = MovieUiModel(
     id = id,
     imageUrl = imageUrl,
     title = title,

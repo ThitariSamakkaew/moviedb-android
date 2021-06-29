@@ -1,12 +1,8 @@
 package com.thitari.themovie.data.repository
 
-import com.thitari.themovie.api.response.DetailResponse
-import com.thitari.themovie.api.response.PageResponse
+import com.thitari.themovie.api.response.*
 import com.thitari.themovie.api.service.MovieService
-import com.thitari.themovie.data.model.MovieDetail
-import com.thitari.themovie.data.model.Page
-import com.thitari.themovie.data.model.toDetail
-import com.thitari.themovie.data.model.toPage
+import com.thitari.themovie.data.model.*
 import javax.inject.Inject
 
 interface MovieRepository {
@@ -18,6 +14,7 @@ interface MovieRepository {
     suspend fun getTopListMovies(page: Int): Page
 
     suspend fun getMovieDetail(movieId: Int): MovieDetail
+
 }
 
 class MovieRepositoryImpl @Inject constructor(private val service: MovieService) :
@@ -42,4 +39,5 @@ class MovieRepositoryImpl @Inject constructor(private val service: MovieService)
         val response: DetailResponse = service.detailMovie(movieId)
         return response.toDetail()
     }
+
 }

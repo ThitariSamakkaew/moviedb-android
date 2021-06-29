@@ -9,7 +9,7 @@ class MovieDetailUiModel (
     val originalTitle: String,
     val overview: String,
     val posterPath: String,
-    val popularity: Float,
+    val popularity: Double,
     val releaseDate: String,
     val originalLanguage: String
 )
